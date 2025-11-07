@@ -181,3 +181,5 @@ data/raw/*.csv
 data/processed/*.pkl
 data/processed/*.csv
 logistics_model.pkl
+
+archive.zip
