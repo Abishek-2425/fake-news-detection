@@ -1,0 +1,117 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0c0c0c;
+    color: #f1f1f1;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Moving gradient background */
+.bg-animation {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(-45deg, #1e1e1e, #001f3f, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    width: 600px;
+    margin: 80px auto;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    animation: fadeIn 1s ease forwards;
+}
+
+.title-glow {
+    color: #00fff2;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00b3b3;
+}
+
+input, textarea {
+    width: 90%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: #eee;
+    resize: none;
+}
+
+button {
+    background: linear-gradient(90deg, #00adb5, #007b83);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00fff2, #00b3b3);
+    box-shadow: 0 0 20px #00fff2;
+}
+
+.loading-text {
+    font-size: 1.2em;
+    color: #00fff2;
+    margin-top: 15px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.4; }
+}
+
+.result {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 25px 0;
+    text-transform: uppercase;
+}
+
+.pulse {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { text-shadow: 0 0 10px currentColor, 0 0 20px currentColor; }
+    50% { text-shadow: 0 0 30px currentColor, 0 0 60px currentColor; }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.back-btn {
+    color: #00fff2;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    text-shadow: 0 0 10px #00fff2;
+}
+.back-btn:before {
+    content: '← ';
+}

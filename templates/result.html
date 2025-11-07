@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container fade-in">
+        <h1 class="title-glow">Prediction Result</h1>
+        <div class="result pulse" style="color: '{{ color }}';">
+            <strong id="prediction-text">{{ prediction }}</strong>
+        </div>
+        <p><b>Title:</b> {{ title }}</p>
+        <p><b>Text:</b> {{ text }}</p>
+        <a href="/" class="back-btn">🔁 Try Another</a>
+    </div>
+</body>
+</html>
