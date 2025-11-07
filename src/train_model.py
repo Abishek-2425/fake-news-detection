@@ -3,7 +3,7 @@ import joblib
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-def train_logistic_model(data_path="data/processed/train_test_data.pkl",
+def train_logistic_model(data_path="models/train_test_data.pkl",
                          model_path="models/logistic_model.pkl"):
     """
     Trains a Logistic Regression model on the TF-IDF features and saves it.

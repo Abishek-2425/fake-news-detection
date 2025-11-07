@@ -1,12 +1,12 @@
 import os
 import joblib
 import pandas as pd
-from src.utils import clean_text
+from utils import clean_text
 
 # === Correct paths (based on your structure) ===
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.path.join(BASE_DIR, 'models', 'logistic_model.pkl')
-VECTORIZER_PATH = os.path.join(BASE_DIR, 'data', 'processed', 'tfidf_vectorizer.pkl')
+VECTORIZER_PATH = os.path.join(BASE_DIR, 'models', 'tfidf_vectorizer.pkl')
 
 def load_model_and_vectorizer():
     """Load the trained model and TF-IDF vectorizer safely."""

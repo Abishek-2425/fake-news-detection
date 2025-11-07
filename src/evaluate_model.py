@@ -6,8 +6,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 def evaluate_model():
     # Load saved model and data
     model = jb.load("./models/logistic_model.pkl")
-    X_train, X_test, y_train, y_test = jb.load("./data/processed/train_test_data.pkl")
-    vectorizer = jb.load("./data/processed/tfidf_vectorizer.pkl")
+    X_train, X_test, y_train, y_test = jb.load("./models/train_test_data.pkl")
+    vectorizer = jb.load("./models/tfidf_vectorizer.pkl")
 
     # Predict
     y_pred = model.predict(X_test)

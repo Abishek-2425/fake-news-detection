@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import joblib
 
-def extract_features(data_path, output_dir="data/processed", max_features=5000):
+def extract_features(data_path, output_dir="models/", max_features=5000):
     """
     Loads cleaned data, applies TF-IDF vectorization, and splits into train/test sets.
 
