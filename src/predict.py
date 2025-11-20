@@ -1,7 +1,7 @@
 import os
 import joblib
 import pandas as pd
-from utils import clean_text
+from src.utils import clean_text
 
 # === Correct paths (based on your structure) ===
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

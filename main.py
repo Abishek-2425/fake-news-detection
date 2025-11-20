@@ -1,8 +1,10 @@
 import os
-from src.data_preprocessing import preprocess_data
+
+from src.data_preprocessing import clean_data
 from src.feature_extraction import extract_features
 from src.train_model import train_logistic_model
 from src.evaluate_model import evaluate_model
+from src.utils import clean_text
 
 def main():
     print("\n🚀 Starting Fake News Detection Pipeline...\n")
@@ -11,7 +13,7 @@ def main():
     processed_data_path = "data/processed/cleaned_data.csv"
     if not os.path.exists(processed_data_path):
         print("🧹 Step 1: Preprocessing raw data...")
-        preprocess_data("data/raw/Fake.csv", "data/raw/True.csv", output_dir="data/processed")
+        clean_data("data/raw/Fake.csv", "data/raw/True.csv", output_dir="data/processed")
     else:
         print("✅ Preprocessed data already exists. Skipping preprocessing.")
 
