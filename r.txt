@@ -1,8 +1,12 @@
 pandas
 numpy
 scikit-learn
-nltk 
+scipy
+nltk
 matplotlib
 seaborn
 joblib
 flask
+jinja2
+werkzeug
+gunicorn                
