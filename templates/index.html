@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>🧠 Fake News Detector</title>
+    <title>Fake News Detector</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="bg-animation"></div>
-
-    <div class="container fade-in">
-        <h1 class="title-glow">🧠 Fake News Detector</h1>
+    <div class="container">
+        <h1>Fake News Detector</h1>
         <form action="/predict" method="post" onsubmit="showLoading()">
-            <input type="text" name="title" placeholder="Enter news title" required><br>
-            <textarea name="text" placeholder="Enter news content" rows="8" required></textarea><br>
+            <input type="text" name="title" placeholder="Enter news title" required>
+            <textarea name="text" placeholder="Enter news content" rows="8" required></textarea>
             <button id="predict-btn" type="submit">Analyze News</button>
-            <p id="loading-text" style="display:none;" class="loading-text">🔍 Analyzing...</p>
+            <p id="loading-text" style="display:none;">Analyzing...</p>
         </form>
+
+        {% if prediction %}
+        <div class="result">
+            <p><strong>Prediction:</strong> {{ prediction }}</p>
+            <p><b>Title:</b> {{ title }}</p>
+            <p><b>Text:</b> {{ text }}</p>
+        </div>
+        {% endif %}
     </div>
 
     <script>

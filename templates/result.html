@@ -6,16 +6,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="bg-animation"></div>
+    <div class="container">
+        <h1>Prediction Result</h1>
 
-    <div class="container fade-in">
-        <h1 class="title-glow">Prediction Result</h1>
-        <div class="result pulse" style="color: '{{ color }}';">
-            <strong id="prediction-text">{{ prediction }}</strong>
+        <!-- Prediction Box -->
+        <div class="result">
+            <strong id="prediction-text" style="color: {{ color }};">
+                {{ prediction }}
+            </strong>
         </div>
+
+        <!-- Title -->
         <p><b>Title:</b> {{ title }}</p>
+
+        <!-- Article Text -->
         <p><b>Text:</b> {{ text }}</p>
-        <a href="/" class="back-btn">🔁 Try Another</a>
+
+        <!-- Try Again Button (same color + style as homepage button) -->
+        <a href="/" class="try-another-btn">
+            <button>Try Another</button>
+        </a>
     </div>
 </body>
 </html>
