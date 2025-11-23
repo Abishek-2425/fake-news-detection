@@ -5,7 +5,7 @@ from src.utils import clean_text
 
 # === Correct paths (based on your structure) ===
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, 'models', 'logistic_model.pkl')
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'svm_model.pkl')
 VECTORIZER_PATH = os.path.join(BASE_DIR, 'models', 'tfidf_vectorizer.pkl')
 
 def load_model_and_vectorizer():
